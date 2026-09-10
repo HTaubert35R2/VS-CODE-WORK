@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #faf7f2;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  border-bottom: 2px solid #2d6a4f;
+}
+
+.logo {
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #222222;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 40px 30px;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  color: #1b4332;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.Btn-belanja {
+  background-color: #1b4332;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-img {
+  flex: 1;
+}
+
+.hero-img img {
+  width: 100%;
+}
+
+#produk {
+  padding: 40px 30px;
+}
+
+#produk h2 {
+  text-align: center;
+  color: #1b4332;
+  margin-bottom: 30px;
+}
+
+.row1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: white;
+  padding: 15px;
+}
+
+.row2 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: white;
+  padding: 15px;
+}
+
+.row1 img, .row2 img {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.row2 img {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.row1 h3, .row2 h3 {
+  color: #1b4332;
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table, th, td {
+  border: 1px solid #999;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #1b4332;
+  color: white;
+}
+
+footer {
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Percabangan</title>
+</head>
+<body>
+    <label for="inputNilai">Masukan Nilai Ujian</label>
+    <input type="number" id="inputNilai">
+    <button onclick="cekNilai()">Cek Nilai</button>
+    <p id="outputHasil"></p>
+
+    <script>
+        function cekNilai(){
+            const Nilai = Number(document.getElementById("inputNilai").value);
+
+            let Hasil
+            if(Nilai %2 ==0){
+                Hasil = 'Genap'
+            }else{
+                Hasil='Ganjil';
+            }
+            document.getElementById('outputHasil').textContent=Hasil
+        }
+    </script>
+</body>
+</html>

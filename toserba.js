@@ -39,3 +39,5 @@ console.log('Nilai B % Nilai A =', modulus);
 
 let isEven = (nilaiA % 2 === 0);
 console.log('Apakah Nilai A genap?', isEven);
+let MDCHECK = 100 % 7
+console.log('MD Check:', MDCHECK);

@@ -1,4 +1,4 @@
-let saldo = 50000
+let saldo = 50000;
 
 saldo += 20000; //di menabung??
 

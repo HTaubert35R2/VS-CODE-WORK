@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckBMI</title>
+</head>
+<body>
+    <label for="inputBerat">Berat Badan (kg)</label>
+    <input type="number" id="inputBerat">
+    <br>
+    <label for="inputTinggi">Tinggi Badan (cm)</label>
+    <input type="number" id="inputTinggi">
+    <br><br>
+    <button onclick="checkBMI()">Hitung BMI</button>
+    <p id="outputBMI"></p>
+
+    <script>
+        function checkBMI(){
+            const Berat = Number(document.getElementById("inputBerat").value);
+            const Tinggi = Number(document.getElementById("inputTinggi").value);
+            
+            let conversionT = Tinggi / 100
+            let BMI = Berat / (conversionT ** 2)
+            if(BMI < 18.5){
+                BMI = 'Kurus'
+            }else if(BMI >= 18.5 && BMI < 25){
+                BMI = 'Normal'
+            }else if(BMI >= 25 && BMI < 30){
+                BMI = 'Gemuk'
+            }else if(BMI === null || BMI === undefined || BMI <=0 || isNaN(BMI)){
+                BMI = 'Masukan berat dan tinggi badan yang valid'
+            }else{
+                BMI = 'Obesitas'
+            }
+            document.getElementById('outputBMI').textContent=BMI
+        }
+    </script>
+</body>
+</html>
