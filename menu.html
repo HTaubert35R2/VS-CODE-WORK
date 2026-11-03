@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Warung Spectre</title>
+</head>
+<style>
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        position: sticky;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Warung Spectre</h1>
+    </header>
+    <main>
+        <h4>Menu: </h4>
+        <div class="menu">
+            <ol class="menu-list">
+                <li>Sate ayam --- Rp. 10.000</li>
+                <li>Rawon Rampal --- Rp. 25.000</li>
+                <li>Cumi Hitam --- Rp. 30.000</li>
+            </ol>
+        </div>
+
+        <table>
+            <tr>
+                <td>Masukkan nomor menu</td>
+                <td>:</td>
+                <td>
+                    <input type="number" id="menuInput">
+                </td>
+            </tr>
+            <tr>
+                <td>Masukkan jumlah porsi</td>
+                <td>:</td>
+                <td>
+                    <input type="number" id="porsiInput">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="checkMenu()">Kirim</button>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Total</label></td>
+                <td>:</td>
+                <td><input type="number" id="hasil" readonly></td>
+            </tr>
+            <tr>
+                <td><label>Uang yang dibayarkan</label></td>
+                <td>:</td>
+                <td><input type="number" id="pembayaran" placeholder="masukkan jumlah bayar"></td>
+            </tr>
+            <tr>
+                <td colspan="5"><button onclick="kembalian()">hitung</button></td>
+            </tr>
+            <tr>\
+                <td><label>Kembalian</label></td>
+                <td>:</td>
+                <td><p id="KembalianText"></p></td>
+            </tr>
+        </table>
+
+        <script>
+
+            let total = 0;
+
+            function checkMenu() {
+                const menuInput = Number(document.getElementById("menuInput").value);
+                const porsiInput = Number(document.getElementById("porsiInput").value);
+                let namaMenu;
+                let harga = 0;
+
+                switch (menuInput) {
+                case 1:
+                    namaMenu = "Sate ayam";
+                    harga = 10000;
+                    break;
+                case 2:
+                    namaMenu = "Rawon Rampal";
+                    harga = 25000;
+                    break;
+                case 3:
+                    namaMenu = "Cumi Hitam";
+                    harga = 30000;
+                    break;
+                default:
+                    namaMenu = "Menu tidak tersedia";
+                }
+                total = porsiInput * harga;
+                document.getElementById('hasil').value = total;
+            
+            }
+
+            function kembalian(){
+            let bayar = Number(document.getElementById('pembayaran').value);
+            let kem = bayar - total;
+            document.getElementById('KembalianText').textContent = kem;
+            
+            }
+
+        </script>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+/* Desktop-first. The base styles are the big-screen layout;
+   the max-width queries at the bottom scale it down. */
+
+:root {
+  --orange: #ff8a5c;
+  --orange-dark: #e5673a;
+  --bg: #fff8f0;
+  --text: #333;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Top bar: brand on the left, nav on the right */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+  background: var(--orange-dark);
+}
+
+.brand {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  margin-left: 6px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+.brand:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.brand:hover { background: none; text-decoration: underline; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.wrap a:focus-visible,
+form button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: var(--orange-dark);
+}
+
+/* Hero */
+.hero {
+  background: var(--orange);
+  color: white;
+  padding: 96px 48px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 55ch;
+  margin: 0 0 32px;
+}
+
+.button {
+  display: inline-block;
+  background: white;
+  color: var(--orange-dark);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+}
+
+.button:hover {
+  background: var(--bg);
+}
+
+/* Content sections */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 72px 48px 0;
+  scroll-margin-top: 64px;
+}
+
+h2 {
+  color: var(--orange-dark);
+  font-size: 32px;
+  margin: 0 0 24px;
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.pet {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.pet h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.pet p {
+  margin: 0;
+}
+
+/* Form: two columns on desktop */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  background: white;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 760px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+  background: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--orange-dark);
+}
+
+footer {
+  text-align: center;
+  padding: 64px 20px 32px;
+  color: #777;
+}
+
+/* Tablet and small laptop */
+@media (max-width: 999px) {
+  .topbar { padding: 0 24px; }
+
+  .hero { padding: 64px 24px; }
+
+  .hero h1 { font-size: 42px; }
+
+  .wrap { padding: 56px 24px 0; }
+
+  .pet-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+/* Phone */
+@media (max-width: 599px) {
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 16px;
+  }
+
+  nav { text-align: center; }
+
+  nav a { margin: 0 2px; padding: 8px 12px; }
+
+  .hero { padding: 40px 16px; }
+
+  .hero h1 { font-size: 32px; }
+
+  .hero p { font-size: 17px; }
+
+  .wrap {
+    padding: 40px 16px 0;
+    scroll-margin-top: 100px;
+  }
+
+  h2 { font-size: 26px; }
+
+  .pet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}

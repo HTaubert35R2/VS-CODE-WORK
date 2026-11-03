@@ -1,0 +1,226 @@
+/* =========================================================
+   Replika desain Shotcut
+   Warna & ukuran diambil dari screenshot:
+   - Ikon & link : teal gelap
+   - Tombol pill : biru
+   - Tombol "More Info" : abu-abu muda
+   ========================================================= */
+
+:root {
+  --teal: #135f7b;        /* warna ikon & link */
+  --teal-dark: #0e4a60;
+  --blue: #0b4fd1;        /* tombol pill biru */
+  --blue-dark: #083ca0;
+  --gray-btn: #dddddd;
+  --gray-btn-hover: #cfcfcf;
+  --text: #111111;
+  --line: #1a1a1a;
+  --border: #e3e3e3;
+  --bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Lato", "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul { margin: 0; padding: 0; }
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--teal);
+}
+.logo:hover { text-decoration: none; }
+.main-nav { display: flex; gap: 24px; align-items: center; }
+.main-nav a { color: var(--text); font-size: 1rem; }
+.main-nav .nav-download {
+  background: var(--blue);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.main-nav .nav-download:hover { background: var(--blue-dark); text-decoration: none; }
+
+/* ================= FITUR (3 KOLOM) ================= */
+.features { padding: 64px 0 56px; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1500px;
+}
+
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-icon {
+  width: 88px;
+  height: 80px;
+  fill: var(--teal);
+  margin-bottom: 28px;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+
+.feature p {
+  margin: 0 0 40px;
+  flex-grow: 1;              /* supaya tombol "More Info" sejajar di bawah */
+  line-height: 1.67;
+}
+
+/* ================= TOMBOL ================= */
+.btn-gray {
+  display: inline-block;
+  background: var(--gray-btn);
+  color: #222;
+  padding: 10px 17px;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  transition: background .15s;
+}
+.btn-gray:hover { background: var(--gray-btn-hover); text-decoration: none; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  padding: 0 14px;
+  border-radius: 999px;
+  line-height: 1.55;
+  vertical-align: baseline;
+  transition: background .15s;
+}
+.pill:hover { background: var(--blue-dark); text-decoration: none; }
+.pill svg { width: 15px; height: 15px; fill: #fff; flex-shrink: 0; }
+
+/* ================= INFO (NEWS / QUICKSTART / SEARCH) ================= */
+.info { padding: 56px 0 72px; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+  max-width: 1280px;
+}
+
+.info-col h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--line);
+}
+
+/* Latest News */
+.news-list { list-style: none; }
+.news-list li { margin-bottom: 16px; font-size: 1.1rem; }
+.news-list a:hover { color: var(--teal-dark); }
+
+/* Quickstart */
+.quick-list { padding-left: 24px; margin-bottom: 8px; font-size: 1.02rem; line-height: 1.55; }
+.quick-list li { margin-bottom: 4px; padding-left: 4px; }
+
+.pill-block { font-size: 1.05rem; padding: 2px 14px; }
+.btn-tutorial { display: table; margin-top: 18px; margin-left: 5px; }
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 72px;
+  padding: 0 24px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+.search-box svg { width: 20px; height: 20px; fill: #333; flex-shrink: 0; }
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 1rem;
+  background: transparent;
+}
+.search-box:focus-within { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(19, 95, 123, .2); }
+.google-badge { font-size: .62rem; color: #666; letter-spacing: .02em; white-space: nowrap; }
+.google-badge b { font-size: 1.1rem; font-weight: 400; color: #555; margin-left: 2px; letter-spacing: 0; }
+
+/* ================= FOOTER ================= */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  text-align: center;
+  font-size: .95rem;
+  color: #555;
+}
+.site-footer p { margin: 0; }
+
+/* ================= RESPONSIF ================= */
+@media (max-width: 1000px) {
+  .features-grid,
+  .info-grid { grid-template-columns: 1fr; gap: 56px; }
+  .feature p { margin-bottom: 28px; }
+  .feature { max-width: 560px; margin: 0 auto; }
+}
+
+@media (max-width: 560px) {
+  .container { padding: 0 20px; }
+  .main-nav { gap: 14px; }
+  .main-nav a:not(.nav-download) { display: none; }
+  body { font-size: 16px; }
+}

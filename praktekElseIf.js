@@ -1,4 +1,4 @@
-let nilai = 
+let nilai = 90;
 
 if(nilai>96){
     console.log("Predikat A");

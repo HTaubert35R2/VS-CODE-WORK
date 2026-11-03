@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shotcut - Replika Tugas Web</title>
+
+  <!-- Font Lato (sama seperti situs Shotcut). Kalau offline, otomatis pakai font sans-serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="newcss.css">
+</head>
+<body>
+
+  <!-- ========== HEADER (tambahan sederhana) ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Shotcut</a>
+      <nav class="main-nav" aria-label="Menu utama">
+        <a href="#fitur">Fitur</a>
+        <a href="#info">Berita</a>
+        <a href="#info">Quickstart</a>
+        <a href="#" class="nav-download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== BAGIAN 1: FITUR (3 kolom) ========== -->
+    <section class="features" id="fitur">
+      <div class="container features-grid">
+
+        <!-- Kolom 1 -->
+        <article class="feature">
+          <svg class="feature-icon" viewBox="0 0 576 512" aria-hidden="true">
+            <path d="M0 128C0 92.7 28.7 64 64 64h256c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zm559.1-28.3c10.1 5.5 16.9 16.2 16.9 28.3v256c0 12.1-6.8 22.8-16.9 28.3-10.1 5.5-22.5 5-32.1-1.4L416 340.3V171.7l111-76.6c9.6-6.4 22-6.9 32.1-1.4z"/>
+          </svg>
+          <h2>Wide Format Support</h2>
+          <p>
+            Supports hundreds of audio and video formats and codecs thanks to
+            <a href="#">FFmpeg</a>. No import required which means native editing,
+            plus multi-format timelines, resolutions and frame-rates within a
+            project. Frame accurate seeking supported for many video formats.
+            <a href="#" class="pill">
+              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M96 96h320a32 32 0 0 1 32 32v256a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V128a32 32 0 0 1 32-32zm32 64v32h96v-32h-96zm0 80v32h256v-32H128zm0 80v32h256v-32H128z"/></svg>
+              Video editor download
+            </a>
+          </p>
+          <a href="#" class="btn-gray">More Info</a>
+        </article>
+
+        <!-- Kolom 2 -->
+        <article class="feature">
+          <svg class="feature-icon" viewBox="0 0 512 512" aria-hidden="true">
+            <path d="M32 160h352v-64l112 96-112 96v-64H32v-64zm448 192H128v-64L16 384l112 96v-64h352v-64z" transform="translate(0 -40)"/>
+          </svg>
+          <h2>Device and Transport Options</h2>
+          <p>
+            Blackmagic Design SDI and HDMI for input and preview monitoring.
+            Screen, webcam and audio capture. Network stream playback. Supports
+            resolutions up to 4k and capture from SDI, HDMI, webcam, JACK &amp;
+            Pulse audio, IP stream, X11 screen and Windows DirectShow devices.
+          </p>
+          <a href="#" class="btn-gray">More Info</a>
+        </article>
+
+        <!-- Kolom 3 -->
+        <article class="feature">
+          <svg class="feature-icon" viewBox="0 0 576 512" aria-hidden="true">
+            <path d="M64 0C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h160l-16 48h-48c-13.3 0-24 10.7-24 24s10.7 24 24 24h256c13.3 0 24-10.7 24-24s-10.7-24-24-24h-48l-16-48h160c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zm16 64h416v256H80V64z" fill-rule="evenodd" transform="translate(0 0)"/>
+          </svg>
+          <h2>Sleek, Intuitive Interface</h2>
+          <p>
+            Multiple dockable and undockable panels, including detailed media
+            properties, recent files with search, playlist with thumbnail view,
+            filter panel, history view, encoding panel, jobs queue, and melted
+            server and playlist. Also supports drag-n-drop of assets from file
+            manager.
+          </p>
+          <a href="#" class="btn-gray">More Info</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== BAGIAN 2: NEWS / QUICKSTART / SEARCH ========== -->
+    <section class="info" id="info">
+      <div class="container info-grid">
+
+        <!-- Latest News -->
+        <div class="info-col">
+          <h3>Latest News</h3>
+          <ul class="news-list">
+            <li><a href="#">New Version 26.9: Auto Duck and Adjustment Clip</a></li>
+            <li><a href="#">New Version 26.8: Elements <span class="fire" aria-label="populer">🔥</span></a></li>
+            <li><a href="#">New Version 26.6: High Dynamic Range</a></li>
+            <li><a href="#">New Version 26.4: All the Small Things</a></li>
+            <li><a href="#">New Version 26.2</a></li>
+            <li><a href="#">New Version 26.1: Go Speed Racer Go</a></li>
+            <li><a href="#">New Version 25.12: Higher &amp; Higher</a></li>
+            <li><a href="#">New Version 25.10: Please Mr. Please</a></li>
+            <li><a href="#">New Version 25.08</a></li>
+          </ul>
+        </div>
+
+        <!-- Quickstart -->
+        <div class="info-col">
+          <h3>Quickstart</h3>
+          <ul class="quick-list">
+            <li>You open files by drag-n-drop in addition to the usual menu and toolbar methods.</li>
+            <li>Tap J, K, L to control playback speed and direction. Tap J or L repeatedly to go faster.</li>
+            <li>Tap I or O to set the in and out points.</li>
+            <li>Press left or right cursor keys to step frame-by-frame.</li>
+            <li>Press page up or down to step one second at-a-time.</li>
+            <li>Press alt+left or alt+right to jump between start, in, out, and end.</li>
+            <li>Version is based on date. You can choose to update whenever you like and keep multiple versions (new versions are available every two months).</li>
+          </ul>
+          <a href="#" class="pill pill-block">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M96 96h320a32 32 0 0 1 32 32v256a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V128a32 32 0 0 1 32-32zm32 64v32h96v-32h-96zm0 80v32h256v-32H128zm0 80v32h256v-32H128z"/></svg>
+            Fund Projects
+          </a>
+          <a href="#" class="btn-gray btn-tutorial">Video Tutorials</a>
+        </div>
+
+        <!-- Search -->
+        <div class="info-col">
+          <h3>Search</h3>
+          <form class="search-box" role="search" onsubmit="return false;">
+            <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M416 208c0 45.9-14.9 88.3-40 122.7l126.6 126.7c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            <label for="q" class="visually-hidden">Cari di situs</label>
+            <input type="search" id="q" placeholder="" autocomplete="off">
+            <span class="google-badge">ENHANCED BY <b>Google</b></span>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER (tambahan sederhana) ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Replika desain situs Shotcut — dibuat untuk tugas kuliah/pembelajaran.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

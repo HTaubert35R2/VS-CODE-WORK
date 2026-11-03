@@ -1,0 +1,351 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.logo {
+    align-self: flex-start;
+    margin-left: 30%;
+    width: 75%;
+    height: 75%;
+
+}
+
+.Navbar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    flex-wrap: wrap;
+    margin-right: 7%;
+
+}
+
+.Nav-Links{
+    text-decoration: none;
+    color: #676464bc;
+    font-weight: bold;
+    padding: 5px 12px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.Nav-Links:hover {
+    color: #080808;
+}
+
+
+#showBanner {
+    background-color: #7b7a7a39;
+    padding: 20px;
+    text-align: center;
+}
+
+.showbox {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 40px auto;
+    overflow: hidden;
+
+    background-image: url('https://www.shotcut.org/assets/img/screenshots/Shotcut-18.11.18.png');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.showtext {
+    color: rgb(0, 0, 0);
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.dwnload {
+    color: rgb(255, 253, 253);
+    background-color:rgb(26, 74, 95);
+    width: 25%;
+    aspect-ratio: 16 / 4;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 9px;
+    border: none;
+    margin-bottom: -50px;
+    transition: all 0.2s ease;
+    max-width: 200px;
+}
+
+.dwnload:hover {
+    background-color: rgba(34, 74, 92, 0.693);
+    color: #fcfbfb;
+}
+
+.Drop {
+    position: relative;
+    display: inline-block;
+}
+
+.Drop-Menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 0px 8px 2px rgba(111, 111, 111, 0.255);
+    padding: 10px 0;
+    z-index: 2000;
+    border-radius: 6px ;
+}
+
+.Drop-Menu.active {
+    display: block;
+    
+}
+
+.Drop-Menu .Nav-Links {
+    display: block;
+    padding: 10px 16px;
+    transition: all 0.3s ease;
+}
+
+.Drop-Menu .Nav-Links:hover {
+    background-color: #c8c0c050;
+   
+}
+
+@media (max-width: 768px)
+{
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+    .Nav-Links {
+        display: none
+    }
+
+    .logo {
+        margin-left: 10%;
+        width: 50%;
+        height: 50%;
+        max-width: 200px;
+        max-height: 75px;
+    }
+
+    .showtext {
+        font-size: 100%;
+    }
+
+    .dwnload {
+        width: 25%;
+        height: 15%;
+        font-size: 60%;
+        min-width: 100px;
+        min-height: 35px;
+    }
+
+    .showbox {
+        width: 40dvh;
+        height: 20dvh;
+    }
+}
+
+/* Everything Above this was done by HAFIDZ KHOIRUL T*/
+
+
+/* Everything below this was done by AMOS AARON R*/
+/* ================= FITUR (3 KOLOM) ================= */
+:root {
+  --teal: #135f7b;        /* warna ikon & link */
+  --teal-dark: #0e4a60;
+  --blue: #0b4fd1;        /* tombol pill biru */
+  --blue-dark: #083ca0;
+  --gray-btn: #dddddd;
+  --gray-btn-hover: #cfcfcf;
+  --text: #111111;
+  --line: #1a1a1a;
+  --border: #e3e3e3;
+  --bg: #ffffff;
+}
+
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul { margin: 0; padding: 0; }
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.features { padding: 64px 0 56px; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1500px;
+}
+
+.feature {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-icon {
+  width: 88px;
+  height: 80px;
+  fill: var(--teal);
+  margin-bottom: 28px;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0 14px;
+  line-height: 1.3;
+}
+
+.feature p {
+  margin: 0 0 40px;
+  flex-grow: 1;              /* supaya tombol "More Info" sejajar di bawah */
+  line-height: 1.67;
+}
+
+/* ================= TOMBOL ================= */
+.btn-gray {
+  display: inline-block;
+  background: var(--gray-btn);
+  color: #222;
+  padding: 10px 17px;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  transition: background .15s;
+}
+.btn-gray:hover { background: var(--gray-btn-hover); text-decoration: none; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  padding: 0 14px;
+  border-radius: 999px;
+  line-height: 1.55;
+  vertical-align: baseline;
+  transition: background .15s;
+}
+.pill:hover { background: var(--blue-dark); text-decoration: none; }
+.pill svg { width: 15px; height: 15px; fill: #fff; flex-shrink: 0; }
+
+/* ================= INFO (NEWS / QUICKSTART / SEARCH) ================= */
+.info { padding: 56px 0 72px; }
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+  max-width: 1280px;
+}
+
+.info-col h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--line);
+}
+
+/* Latest News */
+.news-list { list-style: none; }
+.news-list li { margin-bottom: 16px; font-size: 1.1rem; }
+.news-list a:hover { color: var(--teal-dark); }
+
+/* Quickstart */
+.quick-list { padding-left: 24px; margin-bottom: 8px; font-size: 1.02rem; line-height: 1.55; }
+.quick-list li { margin-bottom: 4px; padding-left: 4px; }
+
+.pill-block { font-size: 1.05rem; padding: 2px 14px; }
+.btn-tutorial { display: table; margin-top: 18px; margin-left: 5px; }
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 72px;
+  padding: 0 24px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+.search-box svg { width: 20px; height: 20px; fill: #333; flex-shrink: 0; }
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 1rem;
+  background: transparent;
+}
+.search-box:focus-within { border-color: var(--teal); box-shadow: 0 0 0 2px rgba(19, 95, 123, .2); }
+.google-badge { font-size: .62rem; color: #666; letter-spacing: .02em; white-space: nowrap; }
+.google-badge b { font-size: 1.1rem; font-weight: 400; color: #555; margin-left: 2px; letter-spacing: 0; }
+
+/* ================= FOOTER ================= */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  text-align: center;
+  font-size: .95rem;
+  color: #555;
+}
+.site-footer p { margin: 0; }
+
+/* ================= RESPONSIF ================= */
+@media (max-width: 1000px) {
+  .features-grid,
+  .info-grid { grid-template-columns: 1fr; gap: 56px; }
+  .feature p { margin-bottom: 28px; }
+  .feature { max-width: 560px; margin: 0 auto; }
+}
+
+@media (max-width: 560px) {
+  .container { padding: 0 20px; }
+  .main-nav { gap: 14px; }
+  .main-nav a:not(.nav-download) { display: none; }
+  body { font-size: 16px; }
+}

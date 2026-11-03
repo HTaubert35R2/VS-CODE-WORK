@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pet Adoption</title>
+  <link rel="stylesheet" href="petAstyle.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#home">Pet Adoption</a>
+  <nav aria-label="Main">
+    <a href="#home">Home</a>
+    <a href="#pets">Pets</a>
+    <a href="#adopt">Adopt</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <h1>Find a new best friend</h1>
+      <p>We are a small shelter that helps cats and dogs find loving homes. Browse our pets, pick your favorite, and send an adoption request.</p>
+      <a class="button" href="#pets">See our pets</a>
+    </div>
+  </section>
+
+  <section id="pets" class="wrap">
+    <h2>Pets Looking for a Home</h2>
+
+    <div class="pet-grid">
+      <article class="pet">
+        <h3>Milo</h3>
+        <p>Cat, 2 years old. Calm, loves naps and being petted.</p>
+      </article>
+
+      <article class="pet">
+        <h3>Buddy</h3>
+        <p>Dog, 3 years old. Very energetic, great with kids.</p>
+      </article>
+
+      <article class="pet">
+        <h3>Luna</h3>
+        <p>Cat, 1 year old. Shy at first but very sweet.</p>
+      </article>
+
+      <article class="pet">
+        <h3>Rocky</h3>
+        <p>Dog, 5 years old. Well trained and loyal.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="adopt" class="wrap">
+    <h2>Adoption Request</h2>
+
+    <form>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <div class="field full">
+        <label for="pet">Which pet?</label>
+        <select id="pet" name="pet">
+          <option>Milo</option>
+          <option>Buddy</option>
+          <option>Luna</option>
+          <option>Rocky</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label for="reason">Why do you want to adopt?</label>
+        <textarea id="reason" name="reason" rows="5"></textarea>
+      </div>
+
+      <div class="full">
+        <button type="submit">Send Request</button>
+      </div>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Pet Adoption</p>
+</footer>
+
+</body>
+</html>

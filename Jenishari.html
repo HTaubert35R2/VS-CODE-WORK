@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Hari</title>
+</head>
+<body>
+    <h2>Kategori Hari </h2>
+    <label>Masukkan Angka:<br>
+    <Input type="number" id="Angka" placeholder="angka 1-7"><br>
+    </label>
+    <button onclick="CheckHari()">Check Hari</button>
+    <p id="Hasil"></p>
+
+    <script>
+        function CheckHari(){
+            let Angka = Number(document.getElementById("Angka").value);
+            let hari;
+
+            switch(Angka){
+                default:
+                    hari = "Masukan angka yang valid";
+                    break;
+                case 1:
+                    hari = "Senin";
+                    break;
+                case 2:
+                    hari = "Selasa";
+                    break;
+                case 3:
+                    hari = "Rabu";
+                    break;
+                case 4:
+                    hari = "Kamis";
+                    break;
+                case 5:
+                    hari = "Jumat";
+                    break;
+                case 6:
+                    hari = "Sabtu";
+                    break;
+                case 7:
+                    hari = "Minggu";
+                    break;
+            }
+            document.getElementById("Hasil").textContent = hari;
+        }
+    </script>
+</body>
+</html>
